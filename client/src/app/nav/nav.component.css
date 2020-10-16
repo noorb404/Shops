@@ -1,0 +1,78 @@
+a:focus{
+    outline: none !important;
+    box-shadow: none !important;
+}
+a{
+    font-family: Arial;
+    border: 0;
+}
+#signUp:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+#signUp{
+    border: 0;
+    font-weight: 600;
+}
+#signUp:hover{
+  color: black;
+}
+
+
+#signIn:hover{
+    color: black;
+  }
+#signIn{
+    background-color: white;
+    color: #f57706;
+    font-weight: 600;
+}
+#signIn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#Find{
+    color: black;
+    font-weight: 600;
+}
+
+#Find:hover{
+    color: #f57706;
+}
+#Home{
+    color: black;
+    font-weight: 600;
+}
+#Home:hover{
+    color: #f57706;
+}
+#User{
+    color: black;
+    font-weight: 600;
+}
+#User:hover{
+    color: #f57706;
+}
+#Logout{
+    color: #f57706;
+    font-weight: 600;
+}
+#Logout:hover{
+  color: black;
+}
+
+input{
+    height: 30px;
+}
+input:focus{
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.dropdown{
+    cursor: pointer;
+}
+.dropdown-menu :hover{
+    background-color:  #f57706;
+}

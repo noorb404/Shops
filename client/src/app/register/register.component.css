@@ -1,0 +1,36 @@
+a:focus{
+    outline: none !important;
+    box-shadow: none !important;
+}
+a{
+    font-family: Arial;
+    border: 0;
+}
+input:focus{
+    outline: none !important;
+    box-shadow: none !important;
+}
+button:focus{
+    outline: none !important;
+    box-shadow: none !important;
+}
+button{
+    background-color:#f57706; 
+    border: 0;
+    font-family: Arial;
+    font-size: medium;
+}
+button:hover{
+    background-color:#f79138;
+}
+br{
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: 5px;
+}
+#cancel{
+    background-color: white;
+    color: rgb(112, 112, 112);
+    border: 0;
+
+}

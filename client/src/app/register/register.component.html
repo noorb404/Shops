@@ -1,0 +1,22 @@
+<div class="row justify-content-center">
+  <div class="col-4">
+      <div class="text-center">
+        <form #registerForm="ngForm" (ngSubmit)="register()" autocomplete="off" >
+        <h1 class="h3 mb-3 font-weight-normal" style="color: #f57706;font-family: Arial;">Please sign up</h1>
+        <hr>
+        <input type="text" id="inputEmail" name="username" class="form-control" [(ngModel)]="model.username" placeholder="Email address" required="" autofocus="">
+        <br>
+        <input type="password" id="inputPassword" name="password" [(ngModel)]="model.password" class="form-control" placeholder="Password" required="">
+        <br>
+        <input type="password" id="CinputPassword" name="cpassword" class="form-control" placeholder="Confirm Password" required="">
+        <div class="checkbox mb-3">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Register to findr</button>
+        <p class="mt-5 mb-3 text-muted">© Findr</p>
+    </form>
+    </div>
+  </div>
+</div>
