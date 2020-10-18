@@ -1,28 +1,47 @@
 
-<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-  <h5 class="my-0 mr-md-auto font-weight-normal" style="color: #f57706;">Findr</h5>
 
-  <nav class="navbar navbar-expand-md">
-    <div class="navbar-collapse collapse show" id="navbarsExampleDefault" style>
-      <a id="Home" class="p-4"  routerLink="/">Home</a>
-     
-        <div class="dropdown" dropdown>
-          <a class="dropdown-toggle" id="Find" dropdownToggle>Find</a>
-          <div class="dropdown-menu" *dropdownMenu>
-            <a class="dropdown-item">Resturants</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item">Coffe shops</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item">Views</a>
-          </div>
-        </div> 
 
-        
-        <a id="User" class="p-4" routerLink="/profile" *ngIf="(accountService.currentUser$ | async) as user">Welcome {{user.username | titlecase}}</a>
+
+
+
+<header>
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-white border-bottom shadow-sm">
+    <a class="navbar-brand" routerLink="/" style="color: #f57706;">Findr</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" id="Home">Home</a>
+        </li>
+
    
-    </div>
-  </nav>
-  <a id="Logout" class="btn "href="#"   (click)="logout()" *ngIf="accountService.currentUser$ | async">Logout</a>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/errors" id="Home">Errors</a>
+        </li>
+        
+        <li class="nav-item dropdown" dropdown>
+            <a class="nav-link dropdown-toggle" id="Find" dropdownToggle>Find</a>
+            <div class="dropdown-menu" *dropdownMenu>
+              <a class="dropdown-item">Resturants</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item">Coffe shops</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item">Views</a>
+            </div>
+        </li>
+
+ 
+
+        <li class="nav-item">        
+          <a id="User"  class="nav-link" routerLink="/profile" *ngIf="(accountService.currentUser$ | async) as user">Welcome {{user.username | titlecase}}</a>
+        </li> 
+     
+      </ul>
+      <a id="Logout" class="btn "href="#"   (click)="logout()" *ngIf="accountService.currentUser$ | async">Logout</a>
   <form *ngIf="(accountService.currentUser$ | async) === null" #loginForm="ngForm" class="form-inline mt-2 mt-md-0" (ngSubmit)="login()"
   autocomplete="off">
   <input 
@@ -41,11 +60,10 @@
   </form>
   <button id="signUp" class="btn btn-primary" routerLink='/register' style="background-color: #f57706;"  *ngIf="(accountService.currentUser$ | async) === null">Sign up</button>
 
-</div>
+    </div>
+  </nav>
+</header>
 
-
-
- 
 
 
 
